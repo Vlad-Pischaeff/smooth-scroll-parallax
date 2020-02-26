@@ -4,32 +4,21 @@
   padding: 0;
 }
 
-/*
-h2, p {
-  overflow: hidden;
-  height: 0;
-  padding-top: 56.25%;
-  background: url(iss061e036670.jpg);
-}
-*/
 .content {
+/*  position: relative;*/
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   display: flex;
   flex-direction: column;
-/*  position: relative;*/
   justify-content: space-around;
   align-items: center;
   padding: 5rem 0;
-/*  counter-reset: figure;*/
-/*  background: #aaa;*/
 }
 .item {
   width: 100%;
-  margin: 5rem 0;
-/*  background: #aaa;*/
+  margin: 1rem 0;
 }
 .item__img-wrap {
 	overflow: hidden;
@@ -38,18 +27,32 @@ h2, p {
 	will-change: transform;
 }
 .item:first-child {
-  width: 65%;
+  width: 90%;
 }
 .item:nth-child(2) {
   width: 90%;
 }
+.item:nth-child(3) {
+  width: 70%;
+}
+.item:nth-child(4) {
+  width: 90%;
+}
 .item:first-child .item__img-wrap {
-	--aspect-ratio: 600/750;
-	--image: url(https://tympanus.net/Tutorials/SmoothScrollAnimations/img/1.jpg);
+	--aspect-ratio: 1041/694;
+	--image: url(2.jpg);
 }
 .item:nth-child(2) .item__img-wrap {
-	--aspect-ratio: 120/76;
-	--image: url(https://tympanus.net/Tutorials/SmoothScrollAnimations/img/2.jpg);
+	--aspect-ratio: 1280/853;
+	--image: url(4.jpg);
+}
+.item:nth-child(3) .item__img-wrap {
+	--aspect-ratio: 1107/1200;
+	--image: url(3.jpg);
+}
+.item:nth-child(4) .item__img-wrap {
+	--aspect-ratio: 1041/585;
+	--image: url(1.jpg);
 }
 .item__img {
 	--overflow: 40px;
@@ -59,22 +62,20 @@ h2, p {
 	position: absolute;
 	background-image: var(--image);
 	background-size: cover;
-/*	background-position: 50% 0%;*/
-	will-change: transform;
+	background-position: 50% 0%;
 }
-
 .item__caption {
   padding: 2rem 1rem;
-/*  background: #eee;*/
+  font-family: paralucent, sans-serif;
 }
 .item__caption-title {
-  font-family: paralucent, sans-serif;
-  font-weight: 400;
-  font-size: 3rem;
+  font-weight: 600;
+  font-size: 6rem;
   margin: 0;
-  color: grey
+  color: #999;
 }
 .item__caption-copy {
+  font-size: 2rem;
   margin: 0;
 }
 .item__caption-copy::before {
@@ -86,9 +87,11 @@ h2, p {
   margin: 0 0 1rem;
   display: block;
 }
+/*
 main {
   border: 1px solid red;
 }
 .content {
   border: 1px solid green;
 }
+*/

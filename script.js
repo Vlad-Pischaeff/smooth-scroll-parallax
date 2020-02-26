@@ -14,9 +14,11 @@ class Item {
       el: el,
       wrap: el.querySelector('.item__img-wrap'),
       img: el.querySelector('.item__img'),
+      cap: el.querySelector('.item__caption'),
     }
 
     this.scale = 0
+    this.scalecap = 0
     this.isVisible
   
     this.init()
@@ -62,7 +64,9 @@ class SmoothScroll {
     this.items.forEach(item => {
       if (item.isVisible) 
         item.scale += diff/300
+        item.scalecap += diff/100      
         item.DOM.img.style.transform = `translateY(${item.scale}px)`
+        item.DOM.cap.style.transform = `translateY(-${item.scalecap}px)`
     })
 
     this.DOM.content.style.top = `-${this.data.last}px`

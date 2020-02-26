@@ -55,14 +55,14 @@
 	--image: url(1.jpg);
 }
 .item__img {
-	--overflow: 40px;
-	height: calc(100% + (2 * var(--overflow)));
-	top: calc( -1 * var(--overflow));
-	width: 100%;
-	position: absolute;
-	background-image: var(--image);
-	background-size: cover;
-	background-position: 50% 0%;
+  --overflow: 40px;
+  height: calc(100% + (2 * var(--overflow)));
+  top: calc( -1 * var(--overflow));
+  width: 100%;
+  position: absolute;
+  background-image: var(--image);
+  background-size: cover;
+  background-position: 50% 0%;
 }
 .item__caption {
   padding: 2rem 1rem;

@@ -17,18 +17,21 @@ class Item {
       cap: el.querySelector('.item__caption'),
     }
 
-    this.scale = 0
-    this.scalecap = 0
-    this.isVisible
+    this.scale = {
+      img: 0,
+      txt: 0,
+    }
   
-    this.init()
+    this.isVisible = false;
+    
+    this.init();
   }
   
   init() {
     this.observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => this.isVisible = entry.intersectionRatio > 0)
     })
-    this.observer.observe(this.DOM.el);
+    this.observer.observe(this.DOM.img);
   }
 }
 
@@ -60,13 +63,14 @@ class SmoothScroll {
     this.data.last = math.lerp(this.data.last, this.data.current, this.data.ease)
     const diff = this.data.current - this.data.last
     let backlash = diff > 0 ? diff : -diff
-    
-    this.items.forEach(item => {
-      if (item.isVisible) 
-        item.scale += diff/300
-        item.scalecap += diff/100      
-        item.DOM.img.style.transform = `translateY(${item.scale}px)`
-        item.DOM.cap.style.transform = `translateY(-${item.scalecap}px)`
+
+    this.items.forEach((item, index) => {
+      if (item.isVisible) {
+        item.scale.img += diff/300
+        item.scale.txt += diff/30      
+        item.DOM.img.style.transform = `translateY(${item.scale.img}px)`
+        item.DOM.cap.style.transform = `translateY(-${item.scale.txt}px)`
+      }
     })
 
     this.DOM.content.style.top = `-${this.data.last}px`

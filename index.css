@@ -33,26 +33,26 @@
   width: 90%;
 }
 .item:nth-child(3) {
-  width: 70%;
+  width: 90%;
 }
 .item:nth-child(4) {
   width: 90%;
 }
 .item:first-child .item__img-wrap {
-	--aspect-ratio: 1041/694;
-	--image: url(2.jpg);
+	--aspect-ratio: 1280/778;
+	--image: url(5.jpg);
 }
 .item:nth-child(2) .item__img-wrap {
-	--aspect-ratio: 1280/853;
-	--image: url(4.jpg);
+	--aspect-ratio: 1280/645;
+	--image: url(6.jpg);
 }
 .item:nth-child(3) .item__img-wrap {
-	--aspect-ratio: 1107/1200;
-	--image: url(3.jpg);
+	--aspect-ratio: 1280/815;
+	--image: url(7.jpg);
 }
 .item:nth-child(4) .item__img-wrap {
-	--aspect-ratio: 1041/585;
-	--image: url(1.jpg);
+	--aspect-ratio: 1280/853;
+	--image: url(8.jpg);
 }
 .item__img {
   --overflow: 40px;
